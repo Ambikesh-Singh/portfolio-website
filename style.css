@@ -116,12 +116,11 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Skills Section with Flexbox */
 #skills ul {
-  display: flex;              /* arrange skills side by side */
-  justify-content: center;    /* center them */
-  gap: 20px;                  /* spacing between skills */
-  list-style: none;           /* remove default bullets */
+  display: flex;             
+  justify-content: center;  
+  gap: 20px;                
+  list-style: none;        
   padding: 0;
 }
 #skills li {
@@ -130,10 +129,9 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* Education Section with Grid */
 #education {
-  display: grid;              /* use grid layout */
-  grid-template-columns: 1fr 1fr; /* two equal columns */
+  display: grid;             
+  grid-template-columns: 1fr 1fr; 
   gap: 20px;
 }
 #education p {
@@ -150,4 +148,40 @@ footer {
   background-color: #007bff;
   color: white;
   padding: 15px;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 2em;
+  }
+  #hero p {
+    font-size: 1em;
+  }
+  #hero {
+    padding: 40px 10px;
+  }
+
+  #education {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    margin: 10px 0;
+  }
+
+  #skills ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 }
