@@ -98,3 +98,56 @@ footer {
   text-align: center;
   padding: 15px;
 }
+
+/* Navigation with Flexbox */
+nav {
+  display: flex;              /* arrange links in a row */
+  justify-content: center;    /* center them horizontally */
+  gap: 20px;                  /* space between links */
+  background-color: #007bff;
+  padding: 15px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Skills Section with Flexbox */
+#skills ul {
+  display: flex;              /* arrange skills side by side */
+  justify-content: center;    /* center them */
+  gap: 20px;                  /* spacing between skills */
+  list-style: none;           /* remove default bullets */
+  padding: 0;
+}
+#skills li {
+  background: #f0f4f8;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Education Section with Grid */
+#education {
+  display: grid;              /* use grid layout */
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 20px;
+}
+#education p {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Footer with Flexbox */
+footer {
+  display: flex;
+  justify-content: center;    /* center footer text */
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+}
