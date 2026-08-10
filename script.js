@@ -5,11 +5,10 @@
 const themeToggle =
     document.getElementById("themeToggle");
 
-// Get saved theme
 const savedTheme =
     localStorage.getItem("theme");
 
-// Apply saved theme
+
 if (savedTheme === "dark") {
 
     document.body.classList.add("dark");
@@ -23,10 +22,10 @@ if (savedTheme === "dark") {
 }
 
 
-// Toggle theme
 themeToggle.addEventListener("click", () => {
 
     document.body.classList.toggle("dark");
+
 
     if (document.body.classList.contains("dark")) {
 
@@ -52,16 +51,65 @@ themeToggle.addEventListener("click", () => {
 
 
 // ==================================================
+// MOBILE MENU
+// ==================================================
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navLinks =
+    document.querySelector(".nav-links");
+
+
+if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+
+        if (navLinks.classList.contains("active")) {
+
+            menuToggle.textContent = "✕";
+
+        } else {
+
+            menuToggle.textContent = "☰";
+
+        }
+
+    });
+
+
+    // Close menu when navigation link is clicked
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+            menuToggle.textContent = "☰";
+
+        });
+
+    });
+
+}
+
+
+// ==================================================
 // FOOTER YEAR
 // ==================================================
 
 const footerText =
     document.getElementById("footerText");
 
+
 if (footerText) {
 
     footerText.textContent =
-        `© ${new Date().getFullYear()} Ambikesh Singh | Codomax Internship`;
+        `© ${new Date().getFullYear()} Ambikesh Singh. All rights reserved.`;
 
 }
 
@@ -72,6 +120,7 @@ if (footerText) {
 
 const scrollBtn =
     document.getElementById("scrollTopBtn");
+
 
 if (scrollBtn) {
 
@@ -114,6 +163,7 @@ if (scrollBtn) {
 const contactForm =
     document.getElementById("contactForm");
 
+
 if (contactForm) {
 
     contactForm.addEventListener(
@@ -122,12 +172,15 @@ if (contactForm) {
 
             event.preventDefault();
 
+
             const name =
                 document.getElementById("name").value;
+
 
             alert(
                 `Thanks ${name}! Your message has been received.`
             );
+
 
             contactForm.reset();
 
@@ -147,7 +200,6 @@ const animatedElements =
     );
 
 
-// Add animation class
 animatedElements.forEach((element) => {
 
     element.classList.add("animate");
@@ -155,7 +207,6 @@ animatedElements.forEach((element) => {
 });
 
 
-// Create observer
 const observer =
     new IntersectionObserver(
 
@@ -167,7 +218,6 @@ const observer =
 
                     entry.target.classList.add("show");
 
-                    // Stop observing after animation
                     observer.unobserve(entry.target);
 
                 }
@@ -183,7 +233,6 @@ const observer =
     );
 
 
-// Start observing
 animatedElements.forEach((element) => {
 
     observer.observe(element);
