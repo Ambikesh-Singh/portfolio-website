@@ -2073,3 +2073,123 @@ footer {
             auto !important;
     }
 }
+
+/* ==================================================
+   UNIVERSAL CARD HOVER EFFECT
+================================================== */
+
+.about-card,
+.skill-card,
+.education-card,
+.project-card,
+.experience-card,
+.resume-card,
+.contact-item,
+.contact-form {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ==================================================
+   CARD HOVER EFFECTS
+================================================== */
+
+.about-card:hover,
+.skill-card:hover,
+.education-card:hover,
+.project-card:hover,
+.experience-card:hover,
+.resume-card:hover,
+.contact-form:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.12);
+
+    border-color: var(--primary);
+}
+
+
+/* ==================================================
+   CONTACT ITEM HOVER
+================================================== */
+
+.contact-item {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.contact-item:hover {
+    background: var(--card);
+
+    border-color: var(--border);
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ==================================================
+   DARK MODE HOVER
+================================================== */
+
+body.dark .about-card:hover,
+body.dark .skill-card:hover,
+body.dark .education-card:hover,
+body.dark .project-card:hover,
+body.dark .experience-card:hover,
+body.dark .resume-card:hover,
+body.dark .contact-form:hover {
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==================================================
+   PROJECT TAG HOVER
+================================================== */
+
+.project-tags span {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.project-tags span:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(37, 99, 235, 0.2);
+}
+
+
+/* ==================================================
+   BUTTON HOVER
+================================================== */
+
+.primary-btn,
+.secondary-btn,
+.contact-btn,
+.submit-btn {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.contact-btn:hover,
+.submit-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.2);
+}
