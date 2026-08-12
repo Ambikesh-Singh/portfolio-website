@@ -72,9 +72,19 @@ if (menuToggle && navLinks) {
 
             menuToggle.textContent = "✕";
 
+            menuToggle.setAttribute(
+                "aria-label",
+                "Close menu"
+            );
+
         } else {
 
             menuToggle.textContent = "☰";
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
 
         }
 
@@ -83,17 +93,24 @@ if (menuToggle && navLinks) {
 
     // Close menu when navigation link is clicked
 
-    navLinks.querySelectorAll("a").forEach(link => {
+    navLinks
+        .querySelectorAll("a")
+        .forEach(link => {
 
-        link.addEventListener("click", () => {
+            link.addEventListener("click", () => {
 
-            navLinks.classList.remove("active");
+                navLinks.classList.remove("active");
 
-            menuToggle.textContent = "☰";
+                menuToggle.textContent = "☰";
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
+
+            });
 
         });
-
-    });
 
 }
 
@@ -145,9 +162,11 @@ if (scrollBtn) {
 
         window.scrollTo({
 
-            top: 0,
+            top:
+                0,
 
-            behavior: "smooth"
+            behavior:
+                "smooth"
 
         });
 
@@ -196,7 +215,14 @@ if (contactForm) {
 
 const animatedElements =
     document.querySelectorAll(
-        ".section-title, .about-content, .skill-card, .education-card, .project-card, .experience-card, .contact-container, .resume-container"
+        ".section-title, " +
+        ".about-content, " +
+        ".skill-card, " +
+        ".education-card, " +
+        ".project-card, " +
+        ".experience-card, " +
+        ".contact-container, " +
+        ".resume-container"
     );
 
 
@@ -218,7 +244,9 @@ const observer =
 
                     entry.target.classList.add("show");
 
-                    observer.unobserve(entry.target);
+                    observer.unobserve(
+                        entry.target
+                    );
 
                 }
 
@@ -227,7 +255,8 @@ const observer =
         },
 
         {
-            threshold: 0.15
+            threshold:
+                0.15
         }
 
     );
