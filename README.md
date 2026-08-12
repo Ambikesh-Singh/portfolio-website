@@ -1,5 +1,4 @@
-# 💻 Personal Portfolio Website 
-## (Ambikesh Singh)
+# 💻 Personal Portfolio Website — Ambikesh Singh
 
 > ✨ A modern, responsive and interactive personal portfolio built to showcase my journey in Computer Science Engineering, my technical skills, projects, experience and interests.
 
